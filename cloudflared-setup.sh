@@ -9,7 +9,7 @@ run_cloudflared ()
 }
 
 if [ ! -f /opt/cloudflared/cloudflared ] || [ "$1" = "pull" ]; then
-	/usr/bin/curl -sf https://raw.githubusercontent.com/gentleseal/ubnt-cloudflared/master/cloudflared --output /opt/cloudflared/cloudflared
+	/usr/bin/curl -sf https://raw.githubusercontent.com/aprets/ubnt-cloudflared/master/cloudflared --output /opt/cloudflared/cloudflared
 	/bin/chmod +x /opt/cloudflared/cloudflared
 	run_cloudflared
 else
